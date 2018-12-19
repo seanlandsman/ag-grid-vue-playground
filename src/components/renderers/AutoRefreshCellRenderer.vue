@@ -13,9 +13,6 @@
                 this.params = params;
                 return false;
             } */
-        },
-        beforeDestroy() {
-            console.log("beforeDestroy");
         }
     }
 </script>

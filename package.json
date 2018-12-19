@@ -9,7 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "vue": "^2.5.17",
+    "vue": "^2.5.2",
     "ag-grid-community": "^19.1.0",
     "ag-grid-vue": "^19.1.0"
   },
