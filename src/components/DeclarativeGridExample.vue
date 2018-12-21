@@ -1,22 +1,26 @@
 <template lang="html">
-    <ag-grid-vue
-            class="ag-theme-balham"
-            style="width: 500px; height: 150px;"
-            :columnDefs="columnDefs"
-            :rowData="rowData">
-    </ag-grid-vue>
+    <div>
+        <h1>Declarative Grid Example</h1>
+        <ag-grid-vue
+                class="ag-theme-balham"
+                style="width: 500px; height: 150px;"
+                :columnDefs="columnDefs"
+                :rowData="rowData">
+        </ag-grid-vue>
+    </div>
 </template>
 <script>
     import {AgGridVue} from "ag-grid-vue";
+
     export default {
-        name: 'stepThree',
-        data () {
+        name: 'DeclarativeGridExample',
+        data() {
             return {
                 columnDefs: null,
                 rowData: null
             };
         },
-        beforeMount () {
+        beforeMount() {
             this.columnDefs = [
                 {headerName: 'Make', field: 'make'},
                 {headerName: 'Model', field: 'model'},

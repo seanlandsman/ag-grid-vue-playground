@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>Auto-Refresh Cell Renderer Grid Example</h1>
         <ag-grid-vue style="width: 600px; height: 150px;"
                      class="ag-theme-balham"
                      :columnDefs="columnDefs"

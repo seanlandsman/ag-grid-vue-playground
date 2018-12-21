@@ -1,0 +1,58 @@
+<template lang="html">
+    <div style="display: inline-block; width: 1100px">
+        <h1>Model Driven Grid Example</h1>
+        <div style="float: left; display: inline-grid">
+            <ag-grid-vue
+                    class="ag-theme-balham"
+                    style="width: 400px; height: 150px;"
+                    :columnDefs="columnDefs"
+                    v-model="modelRowData">
+            </ag-grid-vue>
+            <span>{{ modelRowData }}</span>
+        </div>
+        <div style="float: left; margin-left: 20px; display: inline-grid">
+            <ag-grid-vue
+                    class="ag-theme-balham"
+                    style="width: 400px; height: 150px;float: left"
+                    :columnDefs="columnDefs"
+                    :rowData="rowData">
+            </ag-grid-vue>
+            <span>{{ rowData }}</span>
+        </div>
+    </div>
+</template>
+<script>
+    import {AgGridVue} from "ag-grid-vue";
+
+    export default {
+        name: 'ModelDrivenGridExample',
+        data() {
+            return {
+                columnDefs: null,
+                rowData: null,
+                modelRowData: null
+            };
+        },
+        beforeMount() {
+            this.columnDefs = [
+                {headerName: 'Make', field: 'make', editable: true},
+                {headerName: 'Model', field: 'model', editable: true},
+            ];
+
+            this.modelRowData = Object.freeze([
+                {make: 'Toyota', model: 'Celica'}
+            ]);
+
+            this.rowData = Object.freeze([
+                {make: 'Toyota', model: 'Celica'}
+            ]);
+        },
+        components: {
+            AgGridVue
+        }
+    };
+</script>
+<style lang="css">
+    @import "~ag-grid-community/dist/styles/ag-grid.css";
+    @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+</style>

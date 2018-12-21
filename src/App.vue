@@ -1,18 +1,22 @@
 <template>
     <div>
-        <immutable-props-grid-example></immutable-props-grid-example>
+        <declarative-grid-example></declarative-grid-example>
+        <hr>
+        <model-driven-grid-example></model-driven-grid-example>
         <hr>
         <auto-refresh-grid-example></auto-refresh-grid-example>
     </div>
 </template>
 
 <script>
-    import ImmutablePropsGridExample from './components/ImmutablePropsGridExample';
+    import DeclarativeGridExample from './components/DeclarativeGridExample';
+    import ModelDrivenGridExample from './components/ModelDrivenGridExample';
     import AutoRefreshGridExample from './components/AutoRefreshGridExample';
     export default {
         name: 'App',
         components: {
-            ImmutablePropsGridExample,
+            DeclarativeGridExample,
+            ModelDrivenGridExample,
             AutoRefreshGridExample
         }
     }
