@@ -27,18 +27,18 @@
 
                 dateComponentFramework="DateComponent">
             <ag-grid-column headerName="#" :width="30" checkboxSelection suppressSorting suppressMenu suppressFilter
-                            pinned></ag-grid-column>
+                            pinned="left"></ag-grid-column>
             <ag-grid-column headerName="Employee" headerGroupComponentFramework="HeaderGroupComponent">
-                <ag-grid-column field="name" :width="150" enableRowGroup enablePivot pinned editable></ag-grid-column>
+                <ag-grid-column field="name" :width="150" enableRowGroup enablePivot pinned="left" editable></ag-grid-column>
                 <ag-grid-column field="country" :width="150"
                                 :cellRenderer="countryCellRenderer"
                                 :filterParams="{
                                 cellRenderer: countryCellRenderer,
                                 cellHeight: 20
                             }"
-                                enableRowGroup enablePivot pinned editable></ag-grid-column>
+                                enableRowGroup enablePivot pinned="left" editable></ag-grid-column>
                 <ag-grid-column field="dob" :width="205" headerName="DOB" filter="agDateColumnFilter"
-                                pinned columnGroupShow="open"
+                                pinned="left" columnGroupShow="open"
                                 :cellRenderer="dateCellRenderer"></ag-grid-column>
             </ag-grid-column>
             <ag-grid-column headerName="IT Skills">
@@ -54,7 +54,6 @@
                 <ag-grid-column field="landline" :width="150" filter="text"></ag-grid-column>
                 <ag-grid-column field="address" :width="500" filter="text"></ag-grid-column>
             </ag-grid-column>
-
         </ag-grid-vue>
     </div>
 </template>
@@ -70,6 +69,9 @@
     import RefData from "./utils/RefData";
     import {ProficiencyFilter} from "./filters/proficiencyFilter";
     import {SkillFilter} from "./filters/skillFilter";
+
+
+    import 'ag-grid-enterprise';
 
     export default {
         name: 'DeclarativeGridExample',

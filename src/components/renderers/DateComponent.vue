@@ -7,7 +7,6 @@
                maxLength="2"/>/
         <input class="yyyy" @change="onDateChanged('yyyy', $event)" placeholder="yyyy" v-model="yyyy"
                maxLength="4"/>
-        {{ dd }}{{ mm}}
     </div>
 </template>
 
@@ -41,7 +40,6 @@
             },
 
             getDate(){
-                console.log(this);
                 return this.date;
             },
 

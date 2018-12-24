@@ -43,8 +43,37 @@
             },
 
             onSortRequested(order, event) {
+                console.log(order, event);
                 this.params.setSort(order, event.shiftKey);
             }
         }
     }
 </script>
+
+<style scoped>
+    .customHeaderMenuButton {
+        margin-left: 4px;
+        float: left;
+    }
+
+    .customHeaderLabel {
+        margin-left: 5px;
+        float: left;
+    }
+
+    .customSortDownLabel {
+        float: left;
+        margin-left: 10px;
+    }
+
+    .customSortUpLabel {
+        float: left;
+        margin-left: 3px;
+    }
+
+    .customSortRemoveLabel {
+        float: left;
+        font-size: 11px;
+        margin-left: 3px;
+    }
+</style>
