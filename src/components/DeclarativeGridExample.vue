@@ -44,10 +44,10 @@
             <ag-grid-column headerName="IT Skills">
                 <ag-grid-column field="skills" :width="120" enableRowGroup enablePivot suppressSorting
                                 cellRendererFramework="SkillsCellRenderer"
-                                :filterFramework="SkillFilter"></ag-grid-column>
+                                filterFramework="SkillFilter"></ag-grid-column>
                 <ag-grid-column field="proficiency" :width="135" enableValue
                                 cellRendererFramework="ProficiencyCellRenderer"
-                                :filterFramework="ProficiencyFilter"></ag-grid-column>
+                                :filter="ProficiencyFilter"></ag-grid-column>
             </ag-grid-column>
             <ag-grid-column headerName="Contact">
                 <ag-grid-column field="mobile" :width="150" filter="text"></ag-grid-column>
@@ -68,8 +68,7 @@
     import RowDataFactory from "./utils/RowDataFactory";
     import RefData from "./utils/RefData";
     import {ProficiencyFilter} from "./filters/proficiencyFilter";
-    import {SkillFilter} from "./filters/skillFilter";
-
+    import SkillFilter from "./renderers/SkillFilter";
 
     import 'ag-grid-enterprise';
 
@@ -88,8 +87,7 @@
                     groupExpanded: '<i class="fa fa-minus-square-o"/>',
                     groupContracted: '<i class="fa fa-plus-square-o"/>'
                 },
-                ProficiencyFilter,
-                SkillFilter
+                ProficiencyFilter
             };
         },
         beforeMount() {
@@ -100,7 +98,8 @@
             HeaderGroupComponent,
             SortableHeaderComponent,
             SkillsCellRenderer,
-            ProficiencyCellRenderer
+            ProficiencyCellRenderer,
+            SkillFilter
         },
         methods: {
             dobFilter() {
@@ -110,12 +109,7 @@
                     dateFrom: '2000-01-01'
                 });
 
-                // as the date filter is a React component, and its using setState internally, we need
-                // to allow time for the state to be set (as setState is an async operation)
-                // simply wait for the next tick
-                setTimeout(() => {
-                    this.api.onFilterChanged();
-                }, 0)
+                this.api.onFilterChanged();
             },
 
             countryCellRenderer(params) {
