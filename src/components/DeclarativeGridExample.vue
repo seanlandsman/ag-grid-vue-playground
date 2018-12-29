@@ -33,9 +33,9 @@
                 <ag-grid-column field="country" :width="150"
                                 :cellRenderer="countryCellRenderer"
                                 :filterParams="{
-                                cellRenderer: countryCellRenderer,
-                                cellHeight: 20
-                            }"
+                                    cellRenderer: countryCellRenderer,
+                                    cellHeight: 20
+                                }"
                                 enableRowGroup enablePivot pinned="left" editable></ag-grid-column>
                 <ag-grid-column field="dob" :width="205" headerName="DOB" filter="agDateColumnFilter"
                                 pinned="left" columnGroupShow="open"
@@ -43,10 +43,10 @@
             </ag-grid-column>
             <ag-grid-column headerName="IT Skills">
                 <ag-grid-column field="skills" :width="120" enableRowGroup enablePivot suppressSorting
-                                cellRendererFramework="SkillsCellRenderer"
+                                cellRendererFramework="SkillsCellRenderer" :menuTabs="['filterMenuTab']"
                                 filterFramework="SkillFilter"></ag-grid-column>
                 <ag-grid-column field="proficiency" :width="135" enableValue
-                                cellRendererFramework="ProficiencyCellRenderer"
+                                cellRendererFramework="ProficiencyCellRenderer" :menuTabs="['filterMenuTab']"
                                 :filter="ProficiencyFilter"></ag-grid-column>
             </ag-grid-column>
             <ag-grid-column headerName="Contact">
