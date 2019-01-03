@@ -50,9 +50,9 @@
                                 :filter="ProficiencyFilter"></ag-grid-column>
             </ag-grid-column>
             <ag-grid-column headerName="Contact">
-                <ag-grid-column field="mobile" :width="150" filter="text"></ag-grid-column>
-                <ag-grid-column field="landline" :width="150" filter="text"></ag-grid-column>
-                <ag-grid-column field="address" :width="500" filter="text"></ag-grid-column>
+                <ag-grid-column field="mobile" :width="150" filter="agTextColumnFilter"></ag-grid-column>
+                <ag-grid-column field="landline" :width="150" filter="agTextColumnFilter"></ag-grid-column>
+                <ag-grid-column field="address" :width="500" filter="agTextColumnFilter"></ag-grid-column>
             </ag-grid-column>
         </ag-grid-vue>
     </div>

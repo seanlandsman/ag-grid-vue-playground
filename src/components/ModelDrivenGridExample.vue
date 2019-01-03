@@ -1,7 +1,9 @@
 <template lang="html">
     <div style="display: inline-block; width: 1100px">
         <h1>Model Driven Grid Example</h1>
+        <h3>Note that the data bound table will not update as the row data is frozen.</h3>
         <div style="float: left; display: inline-grid">
+            <span>Model Driven</span>
             <ag-grid-vue
                     class="ag-theme-balham"
                     style="width: 400px; height: 150px;"
@@ -11,6 +13,7 @@
             <span>{{ modelRowData }}</span>
         </div>
         <div style="float: left; margin-left: 20px; display: inline-grid">
+            <span>Data Bound</span>
             <ag-grid-vue
                     class="ag-theme-balham"
                     style="width: 400px; height: 150px;float: left"
