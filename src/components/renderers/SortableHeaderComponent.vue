@@ -43,7 +43,6 @@
             },
 
             onSortRequested(order, event) {
-                console.log(order, event);
                 this.params.setSort(order, event.shiftKey);
             }
         }

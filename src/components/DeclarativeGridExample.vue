@@ -26,7 +26,7 @@
                 }"
 
                 dateComponentFramework="DateComponent">
-            <ag-grid-column headerName="#" :width="30" checkboxSelection suppressSorting suppressMenu suppressFilter
+            <ag-grid-column headerName="#" :width="30" checkboxSelection :sortable="false" suppressMenu :filter="false"
                             pinned="left"></ag-grid-column>
             <ag-grid-column headerName="Employee" headerGroupComponentFramework="HeaderGroupComponent">
                 <ag-grid-column field="name" :width="150" enableRowGroup enablePivot pinned="left" editable></ag-grid-column>
@@ -42,7 +42,7 @@
                                 :cellRenderer="dateCellRenderer"></ag-grid-column>
             </ag-grid-column>
             <ag-grid-column headerName="IT Skills">
-                <ag-grid-column field="skills" :width="120" enableRowGroup enablePivot suppressSorting
+                <ag-grid-column field="skills" :width="120" enableRowGroup enablePivot :sortable="false"
                                 cellRendererFramework="SkillsCellRenderer" :menuTabs="['filterMenuTab']"
                                 filterFramework="SkillFilter"></ag-grid-column>
                 <ag-grid-column field="proficiency" :width="135" enableValue
@@ -137,5 +137,5 @@
     @import "~ag-grid-community/dist/styles/ag-grid.css";
     @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 
-    @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+    @import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
 </style>
