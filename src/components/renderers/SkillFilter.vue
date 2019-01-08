@@ -17,10 +17,9 @@
 </template>
 
 <script>
-    import Vue from "vue";
     import RefData from '../utils/RefData';
 
-    export default Vue.extend({
+    export default {
         name: 'SkillFilter',
         data() {
             return {
@@ -78,7 +77,7 @@
                 this.params.filterChangedCallback();
             }
         },
-    })
+    }
 </script>
 
 <style scoped>
