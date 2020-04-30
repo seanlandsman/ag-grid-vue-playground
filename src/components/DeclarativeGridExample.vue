@@ -2,8 +2,8 @@
     <div>
         <h1>Declarative Grid Example</h1>
         <ag-grid-vue
-                class="ag-theme-balham"
-                style="width: 700px; height: 400px;"
+                class="ag-theme-alpine"
+                style="width: 1100px; height: 400px;"
                 :rowData="rowData"
 
                 :sideBar="sideBar"
@@ -135,7 +135,7 @@
 </script>
 <style lang="css">
     @import "~ag-grid-community/dist/styles/ag-grid.css";
-    @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+    @import "~ag-grid-community/dist/styles/ag-theme-alpine.css";
 
     @import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
 </style>

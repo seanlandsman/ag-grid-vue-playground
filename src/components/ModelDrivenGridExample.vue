@@ -6,7 +6,7 @@
             <span>Model Driven</span>
             <ag-grid-vue
                     ref="model"
-                    class="ag-theme-balham"
+                    class="ag-theme-alpine"
                     style="width: 400px; height: 150px;"
                     :columnDefs="columnDefs"
                     v-model="modelRowData">
@@ -18,7 +18,7 @@
             <span>Data Bound</span>
             <ag-grid-vue
                     ref="normal"
-                    class="ag-theme-balham"
+                    class="ag-theme-alpine"
                     style="width: 400px; height: 150px;float: left"
                     :columnDefs="columnDefs"
                     :rowData="rowData">
@@ -83,5 +83,5 @@
 </script>
 <style lang="css">
     @import "~ag-grid-community/dist/styles/ag-grid.css";
-    @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+    @import "~ag-grid-community/dist/styles/ag-theme-alpine.css";
 </style>

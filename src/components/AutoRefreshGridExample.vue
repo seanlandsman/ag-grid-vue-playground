@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>Auto-Refresh Cell Renderer Grid Example</h1>
-        <ag-grid-vue style="width: 600px; height: 150px;"
-                     class="ag-theme-balham"
+        <ag-grid-vue style="width: 1100px; height: 150px;"
+                     class="ag-theme-alpine"
                      :columnDefs="columnDefs"
                      :rowData="rowData"
                      :components="components"
@@ -75,5 +75,5 @@
 
 <style lang="css">
     @import '~ag-grid-community/dist/styles/ag-grid.css';
-    @import '~ag-grid-community/dist/styles/ag-theme-balham.css';
+    @import '~ag-grid-community/dist/styles/ag-theme-alpine.css';
 </style>
