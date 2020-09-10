@@ -1,6 +1,6 @@
 <template>
-    <span >
-        <img v-for="skill in skills" :src='`https://www.ag-grid.com/images/skills/${skill}.png`' width=16 :title='skill'/>
+    <span>
+        <img v-for="skill in skills" :src='`https://www.ag-grid.com/images/skills/${skill}.png`' style="width: 16px; padding-top: 15px" :title='skill'/>
     </span>
 </template>
 

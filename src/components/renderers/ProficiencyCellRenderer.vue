@@ -27,7 +27,7 @@
 <style scoped>
     .div-percent-bar {
         display: inline-block;
-        height: 20px;
+        height: 100%;
         position: relative;
     }
 
